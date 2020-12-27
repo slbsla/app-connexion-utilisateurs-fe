@@ -1,0 +1,30 @@
+<mat-card style="width: 100%; height: 100%;">
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <p>
+                <mat-form-field>
+                  <input style="width: 400px;" type="text" matInput placeholder="Username" formControlName="username">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                <input style="width: 400px;" type="password" matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </p>
+            <p *ngIf="error" class="error">
+                {{ error }}
+            </p>
+            
+            <div class="button">
+                <button type="submit" mat-button style="background-color: cadetblue; width: 150px;border-radius: 0px;">Login</button>
+            </div>
+
+            <div style="flex: content; padding-top: 5px;">
+                <button type="submit" (click) ="gotoSignUp()"  mat-button style="float: left; background-color: cadetblue; width: 150px;border-radius: 0px;">Sign Up</button>
+                <button type="submit" (click) ="gotoForget()" mat-button style="float: right; background-color: cadetblue; width: 150px;border-radius: 0px;">Forget password</button>
+            </div>
+
+        </form>
+    </mat-card-content>
+</mat-card>

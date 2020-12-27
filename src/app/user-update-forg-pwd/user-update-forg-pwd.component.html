@@ -1,0 +1,22 @@
+<mat-card style="width: 100%; height: 100%;">
+    <mat-card-title>Update Forgotten Password</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <p>
+                <mat-form-field>
+                  <input style="width: 400px;" type="password" matInput placeholder="new passwor" formControlName="password">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                  <input style="width: 400px;" type="password" matInput placeholder="confirm password" formControlName="passwordConfirm">
+                </mat-form-field>
+            </p>
+           
+            <div style="flex: content; padding-top: 5px;">
+                <button type="submit" (click) ="cancel()" mat-button style="float: left; background-color: cadetblue; width: 150px;border-radius: 0px;">Cancel</button>
+                <button type="submit" (click) ="confirm()" mat-button style="float: right; background-color: cadetblue; width: 150px;border-radius: 0px;">Confirm</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

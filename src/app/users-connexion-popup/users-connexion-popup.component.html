@@ -1,0 +1,27 @@
+<div style="height: 100;width: 100%;">
+  
+    <ng-container *ngIf="screen == 'login'">
+        <app-user-login (messageEvent)="recieveMessage($event)"></app-user-login>
+    </ng-container>
+
+    <ng-container *ngIf="screen == 'signup'">
+        <app-user-sign-up (messageEvent)="recieveMessage($event)"></app-user-sign-up>
+    </ng-container>
+
+    <ng-container *ngIf="screen == 'forget'">
+        <app-user-forget-pwd (messageEvent)="recieveMessage($event)"></app-user-forget-pwd>
+    </ng-container>
+
+    <ng-container *ngIf="screen == 'confirm-token'">
+        <app-user-confirm-token (messageEvent)="recieveMessage($event)"></app-user-confirm-token>
+    </ng-container>
+
+    <ng-container *ngIf="screen == 'confirm-account'">
+        <app-user-account-confirmation (messageEvent)="recieveMessage($event)"></app-user-account-confirmation>
+    </ng-container>
+
+    <ng-container *ngIf="screen == 'update-pwd'">
+        <app-user-update-forg-pwd (messageEvent)="recieveMessage($event)"></app-user-update-forg-pwd>
+    </ng-container>
+
+</div>
